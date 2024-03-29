@@ -2,6 +2,13 @@
 
 // Original file: proto/health.proto
 
+/**
+ * @@
+ * @@.. cpp:enum:: ServingStatus
+ * @@
+ * @@   Statuses supported by GRPC's health check.
+ * @@
+ */
 export const _grpc_health_v1_HealthCheckResponse_ServingStatus = {
   UNKNOWN: "UNKNOWN",
   SERVING: "SERVING",
@@ -9,6 +16,13 @@ export const _grpc_health_v1_HealthCheckResponse_ServingStatus = {
   SERVICE_UNKNOWN: "SERVICE_UNKNOWN",
 } as const;
 
+/**
+ * @@
+ * @@.. cpp:enum:: ServingStatus
+ * @@
+ * @@   Statuses supported by GRPC's health check.
+ * @@
+ */
 export type _grpc_health_v1_HealthCheckResponse_ServingStatus =
   | "UNKNOWN"
   | 0
@@ -19,13 +33,34 @@ export type _grpc_health_v1_HealthCheckResponse_ServingStatus =
   | "SERVICE_UNKNOWN"
   | 3;
 
+/**
+ * @@
+ * @@.. cpp:enum:: ServingStatus
+ * @@
+ * @@   Statuses supported by GRPC's health check.
+ * @@
+ */
 export type _grpc_health_v1_HealthCheckResponse_ServingStatus__Output =
   (typeof _grpc_health_v1_HealthCheckResponse_ServingStatus)[keyof typeof _grpc_health_v1_HealthCheckResponse_ServingStatus];
 
+/**
+ * @@
+ * @@.. cpp:var:: message HealthCheckResponse
+ * @@
+ * @@   Response message for HealthCheck
+ * @@
+ */
 export interface HealthCheckResponse {
   status?: _grpc_health_v1_HealthCheckResponse_ServingStatus;
 }
 
+/**
+ * @@
+ * @@.. cpp:var:: message HealthCheckResponse
+ * @@
+ * @@   Response message for HealthCheck
+ * @@
+ */
 export interface HealthCheckResponse__Output {
   status: _grpc_health_v1_HealthCheckResponse_ServingStatus__Output;
 }

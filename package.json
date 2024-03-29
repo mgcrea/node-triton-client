@@ -27,7 +27,7 @@
     "dev": "tsx watch --inspect src/index.ts",
     "cli": "tsx watch --inspect src/bin/cli.ts random 5 25",
     "build": "tsup --entry src/index.ts --format cjs,esm --sourcemap --dts --clean --entry src/bin/cli.ts",
-    "build:proto": "proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=src/types proto/*.proto && prettier --write src/types",
+    "build:proto": "proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --includeComments --grpcLib=@grpc/grpc-js --outDir=src/types proto/*.proto && prettier --write src/types",
     "preview": "node --experimental-specifier-resolution=node --no-warnings dist/index.js",
     "prettify": "prettier --write src/ test/",
     "lint": "eslint src/ test/",

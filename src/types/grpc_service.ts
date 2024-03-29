@@ -21,6 +21,13 @@ export interface ProtoGrpcType {
     CudaSharedMemoryUnregisterRequest: MessageTypeDefinition;
     CudaSharedMemoryUnregisterResponse: MessageTypeDefinition;
     DataType: EnumTypeDefinition;
+    /**
+     * @@
+     * @@.. cpp:var:: service InferenceService
+     * @@
+     * @@   Inference Server GRPC endpoints.
+     * @@
+     */
     GRPCInferenceService: SubtypeConstructor<
       typeof grpc.Client,
       _inference_GRPCInferenceServiceClient

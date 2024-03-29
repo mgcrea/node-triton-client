@@ -14,6 +14,13 @@ export interface ProtoGrpcType {
   grpc: {
     health: {
       v1: {
+        /**
+         * @@
+         * @@.. cpp:var:: service Health
+         * @@
+         * @@   Health service for GRPC endpoints.
+         * @@
+         */
         Health: SubtypeConstructor<typeof grpc.Client, _grpc_health_v1_HealthClient> & {
           service: _grpc_health_v1_HealthDefinition;
         };

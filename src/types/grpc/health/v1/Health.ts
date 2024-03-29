@@ -11,7 +11,21 @@ import type {
   HealthCheckResponse__Output as _grpc_health_v1_HealthCheckResponse__Output,
 } from "../../../grpc/health/v1/HealthCheckResponse";
 
+/**
+ * @@
+ * @@.. cpp:var:: service Health
+ * @@
+ * @@   Health service for GRPC endpoints.
+ * @@
+ */
 export interface HealthClient extends grpc.Client {
+  /**
+   * @@  .. cpp:var:: rpc Check(HealthCheckRequest) returns
+   * @@       (HealthCheckResponse)
+   * @@
+   * @@     Get serving status of the inference server.
+   * @@
+   */
   Check(
     argument: _grpc_health_v1_HealthCheckRequest,
     metadata: grpc.Metadata,
@@ -32,6 +46,13 @@ export interface HealthClient extends grpc.Client {
     argument: _grpc_health_v1_HealthCheckRequest,
     callback: grpc.requestCallback<_grpc_health_v1_HealthCheckResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc Check(HealthCheckRequest) returns
+   * @@       (HealthCheckResponse)
+   * @@
+   * @@     Get serving status of the inference server.
+   * @@
+   */
   check(
     argument: _grpc_health_v1_HealthCheckRequest,
     metadata: grpc.Metadata,
@@ -54,7 +75,21 @@ export interface HealthClient extends grpc.Client {
   ): grpc.ClientUnaryCall;
 }
 
+/**
+ * @@
+ * @@.. cpp:var:: service Health
+ * @@
+ * @@   Health service for GRPC endpoints.
+ * @@
+ */
 export interface HealthHandlers extends grpc.UntypedServiceImplementation {
+  /**
+   * @@  .. cpp:var:: rpc Check(HealthCheckRequest) returns
+   * @@       (HealthCheckResponse)
+   * @@
+   * @@     Get serving status of the inference server.
+   * @@
+   */
   Check: grpc.handleUnaryCall<
     _grpc_health_v1_HealthCheckRequest__Output,
     _grpc_health_v1_HealthCheckResponse

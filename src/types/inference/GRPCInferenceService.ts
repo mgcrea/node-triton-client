@@ -159,7 +159,22 @@ import type {
   TraceSettingResponse__Output as _inference_TraceSettingResponse__Output,
 } from "../inference/TraceSettingResponse";
 
+/**
+ * @@
+ * @@.. cpp:var:: service InferenceService
+ * @@
+ * @@   Inference Server GRPC endpoints.
+ * @@
+ */
 export interface GRPCInferenceServiceClient extends grpc.Client {
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryRegister(
+   * @@                     CudaSharedMemoryRegisterRequest)
+   * @@                   returns (CudaSharedMemoryRegisterResponse)
+   * @@
+   * @@     Register a CUDA-shared-memory region.
+   * @@
+   */
   CudaSharedMemoryRegister(
     argument: _inference_CudaSharedMemoryRegisterRequest,
     metadata: grpc.Metadata,
@@ -180,6 +195,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_CudaSharedMemoryRegisterRequest,
     callback: grpc.requestCallback<_inference_CudaSharedMemoryRegisterResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryRegister(
+   * @@                     CudaSharedMemoryRegisterRequest)
+   * @@                   returns (CudaSharedMemoryRegisterResponse)
+   * @@
+   * @@     Register a CUDA-shared-memory region.
+   * @@
+   */
   cudaSharedMemoryRegister(
     argument: _inference_CudaSharedMemoryRegisterRequest,
     metadata: grpc.Metadata,
@@ -201,6 +224,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_CudaSharedMemoryRegisterResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryStatus(
+   * @@                     CudaSharedMemoryStatusRequest)
+   * @@                   returns (CudaSharedMemoryStatusRespose)
+   * @@
+   * @@     Get the status of all registered CUDA-shared-memory regions.
+   * @@
+   */
   CudaSharedMemoryStatus(
     argument: _inference_CudaSharedMemoryStatusRequest,
     metadata: grpc.Metadata,
@@ -221,6 +252,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_CudaSharedMemoryStatusRequest,
     callback: grpc.requestCallback<_inference_CudaSharedMemoryStatusResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryStatus(
+   * @@                     CudaSharedMemoryStatusRequest)
+   * @@                   returns (CudaSharedMemoryStatusRespose)
+   * @@
+   * @@     Get the status of all registered CUDA-shared-memory regions.
+   * @@
+   */
   cudaSharedMemoryStatus(
     argument: _inference_CudaSharedMemoryStatusRequest,
     metadata: grpc.Metadata,
@@ -242,6 +281,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_CudaSharedMemoryStatusResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryUnregister(
+   * @@                     CudaSharedMemoryUnregisterRequest)
+   * @@                   returns (CudaSharedMemoryUnregisterResponse)
+   * @@
+   * @@     Unregister a CUDA-shared-memory region.
+   * @@
+   */
   CudaSharedMemoryUnregister(
     argument: _inference_CudaSharedMemoryUnregisterRequest,
     metadata: grpc.Metadata,
@@ -262,6 +309,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_CudaSharedMemoryUnregisterRequest,
     callback: grpc.requestCallback<_inference_CudaSharedMemoryUnregisterResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryUnregister(
+   * @@                     CudaSharedMemoryUnregisterRequest)
+   * @@                   returns (CudaSharedMemoryUnregisterResponse)
+   * @@
+   * @@     Unregister a CUDA-shared-memory region.
+   * @@
+   */
   cudaSharedMemoryUnregister(
     argument: _inference_CudaSharedMemoryUnregisterRequest,
     metadata: grpc.Metadata,
@@ -283,6 +338,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_CudaSharedMemoryUnregisterResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc LogSettings(LogSettingsRequest)
+   * @@                   returns (LogSettingsResponse)
+   * @@
+   * @@     Update and get the log settings of the Triton server.
+   * @@
+   */
   LogSettings(
     argument: _inference_LogSettingsRequest,
     metadata: grpc.Metadata,
@@ -303,6 +365,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_LogSettingsRequest,
     callback: grpc.requestCallback<_inference_LogSettingsResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc LogSettings(LogSettingsRequest)
+   * @@                   returns (LogSettingsResponse)
+   * @@
+   * @@     Update and get the log settings of the Triton server.
+   * @@
+   */
   logSettings(
     argument: _inference_LogSettingsRequest,
     metadata: grpc.Metadata,
@@ -324,6 +393,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_LogSettingsResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelConfig(ModelConfigRequest) returns
+   * @@       (ModelConfigResponse)
+   * @@
+   * @@     Get model configuration.
+   * @@
+   */
   ModelConfig(
     argument: _inference_ModelConfigRequest,
     metadata: grpc.Metadata,
@@ -344,6 +420,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ModelConfigRequest,
     callback: grpc.requestCallback<_inference_ModelConfigResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ModelConfig(ModelConfigRequest) returns
+   * @@       (ModelConfigResponse)
+   * @@
+   * @@     Get model configuration.
+   * @@
+   */
   modelConfig(
     argument: _inference_ModelConfigRequest,
     metadata: grpc.Metadata,
@@ -365,6 +448,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ModelConfigResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelInfer(ModelInferRequest) returns
+   * @@       (ModelInferResponse)
+   * @@
+   * @@     Perform inference using a specific model.
+   * @@
+   */
   ModelInfer(
     argument: _inference_ModelInferRequest,
     metadata: grpc.Metadata,
@@ -385,6 +475,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ModelInferRequest,
     callback: grpc.requestCallback<_inference_ModelInferResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ModelInfer(ModelInferRequest) returns
+   * @@       (ModelInferResponse)
+   * @@
+   * @@     Perform inference using a specific model.
+   * @@
+   */
   modelInfer(
     argument: _inference_ModelInferRequest,
     metadata: grpc.Metadata,
@@ -406,6 +503,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ModelInferResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelMetadata(ModelMetadataRequest) returns
+   * @@       (ModelMetadataResponse)
+   * @@
+   * @@     Get model metadata.
+   * @@
+   */
   ModelMetadata(
     argument: _inference_ModelMetadataRequest,
     metadata: grpc.Metadata,
@@ -426,6 +530,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ModelMetadataRequest,
     callback: grpc.requestCallback<_inference_ModelMetadataResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ModelMetadata(ModelMetadataRequest) returns
+   * @@       (ModelMetadataResponse)
+   * @@
+   * @@     Get model metadata.
+   * @@
+   */
   modelMetadata(
     argument: _inference_ModelMetadataRequest,
     metadata: grpc.Metadata,
@@ -447,6 +558,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ModelMetadataResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelReady(ModelReadyRequest) returns
+   * @@       (ModelReadyResponse)
+   * @@
+   * @@     Check readiness of a model in the inference server.
+   * @@
+   */
   ModelReady(
     argument: _inference_ModelReadyRequest,
     metadata: grpc.Metadata,
@@ -467,6 +585,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ModelReadyRequest,
     callback: grpc.requestCallback<_inference_ModelReadyResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ModelReady(ModelReadyRequest) returns
+   * @@       (ModelReadyResponse)
+   * @@
+   * @@     Check readiness of a model in the inference server.
+   * @@
+   */
   modelReady(
     argument: _inference_ModelReadyRequest,
     metadata: grpc.Metadata,
@@ -488,6 +613,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ModelReadyResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelStatistics(
+   * @@                     ModelStatisticsRequest)
+   * @@                   returns (ModelStatisticsResponse)
+   * @@
+   * @@     Get the cumulative inference statistics for a model.
+   * @@
+   */
   ModelStatistics(
     argument: _inference_ModelStatisticsRequest,
     metadata: grpc.Metadata,
@@ -508,6 +641,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ModelStatisticsRequest,
     callback: grpc.requestCallback<_inference_ModelStatisticsResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ModelStatistics(
+   * @@                     ModelStatisticsRequest)
+   * @@                   returns (ModelStatisticsResponse)
+   * @@
+   * @@     Get the cumulative inference statistics for a model.
+   * @@
+   */
   modelStatistics(
     argument: _inference_ModelStatisticsRequest,
     metadata: grpc.Metadata,
@@ -529,6 +670,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ModelStatisticsResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelStreamInfer(stream ModelInferRequest) returns
+   * @@       (stream ModelStreamInferResponse)
+   * @@
+   * @@     Perform streaming inference.
+   * @@
+   */
   ModelStreamInfer(
     metadata: grpc.Metadata,
     options?: grpc.CallOptions,
@@ -542,6 +690,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     _inference_ModelInferRequest,
     _inference_ModelStreamInferResponse__Output
   >;
+  /**
+   * @@  .. cpp:var:: rpc ModelStreamInfer(stream ModelInferRequest) returns
+   * @@       (stream ModelStreamInferResponse)
+   * @@
+   * @@     Perform streaming inference.
+   * @@
+   */
   modelStreamInfer(
     metadata: grpc.Metadata,
     options?: grpc.CallOptions,
@@ -556,6 +711,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     _inference_ModelStreamInferResponse__Output
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc RepositoryIndex(RepositoryIndexRequest) returns
+   * @@       (RepositoryIndexResponse)
+   * @@
+   * @@     Get the index of model repository contents.
+   * @@
+   */
   RepositoryIndex(
     argument: _inference_RepositoryIndexRequest,
     metadata: grpc.Metadata,
@@ -576,6 +738,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_RepositoryIndexRequest,
     callback: grpc.requestCallback<_inference_RepositoryIndexResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc RepositoryIndex(RepositoryIndexRequest) returns
+   * @@       (RepositoryIndexResponse)
+   * @@
+   * @@     Get the index of model repository contents.
+   * @@
+   */
   repositoryIndex(
     argument: _inference_RepositoryIndexRequest,
     metadata: grpc.Metadata,
@@ -597,6 +766,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_RepositoryIndexResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc RepositoryModelLoad(RepositoryModelLoadRequest) returns
+   * @@       (RepositoryModelLoadResponse)
+   * @@
+   * @@     Load or reload a model from a repository.
+   * @@
+   */
   RepositoryModelLoad(
     argument: _inference_RepositoryModelLoadRequest,
     metadata: grpc.Metadata,
@@ -617,6 +793,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_RepositoryModelLoadRequest,
     callback: grpc.requestCallback<_inference_RepositoryModelLoadResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc RepositoryModelLoad(RepositoryModelLoadRequest) returns
+   * @@       (RepositoryModelLoadResponse)
+   * @@
+   * @@     Load or reload a model from a repository.
+   * @@
+   */
   repositoryModelLoad(
     argument: _inference_RepositoryModelLoadRequest,
     metadata: grpc.Metadata,
@@ -638,6 +821,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_RepositoryModelLoadResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc RepositoryModelUnload(RepositoryModelUnloadRequest)
+   * @@       returns (RepositoryModelUnloadResponse)
+   * @@
+   * @@     Unload a model.
+   * @@
+   */
   RepositoryModelUnload(
     argument: _inference_RepositoryModelUnloadRequest,
     metadata: grpc.Metadata,
@@ -658,6 +848,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_RepositoryModelUnloadRequest,
     callback: grpc.requestCallback<_inference_RepositoryModelUnloadResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc RepositoryModelUnload(RepositoryModelUnloadRequest)
+   * @@       returns (RepositoryModelUnloadResponse)
+   * @@
+   * @@     Unload a model.
+   * @@
+   */
   repositoryModelUnload(
     argument: _inference_RepositoryModelUnloadRequest,
     metadata: grpc.Metadata,
@@ -679,6 +876,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_RepositoryModelUnloadResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ServerLive(ServerLiveRequest) returns
+   * @@       (ServerLiveResponse)
+   * @@
+   * @@     Check liveness of the inference server.
+   * @@
+   */
   ServerLive(
     argument: _inference_ServerLiveRequest,
     metadata: grpc.Metadata,
@@ -699,6 +903,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ServerLiveRequest,
     callback: grpc.requestCallback<_inference_ServerLiveResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ServerLive(ServerLiveRequest) returns
+   * @@       (ServerLiveResponse)
+   * @@
+   * @@     Check liveness of the inference server.
+   * @@
+   */
   serverLive(
     argument: _inference_ServerLiveRequest,
     metadata: grpc.Metadata,
@@ -720,6 +931,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ServerLiveResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ServerMetadata(ServerMetadataRequest) returns
+   * @@       (ServerMetadataResponse)
+   * @@
+   * @@     Get server metadata.
+   * @@
+   */
   ServerMetadata(
     argument: _inference_ServerMetadataRequest,
     metadata: grpc.Metadata,
@@ -740,6 +958,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ServerMetadataRequest,
     callback: grpc.requestCallback<_inference_ServerMetadataResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ServerMetadata(ServerMetadataRequest) returns
+   * @@       (ServerMetadataResponse)
+   * @@
+   * @@     Get server metadata.
+   * @@
+   */
   serverMetadata(
     argument: _inference_ServerMetadataRequest,
     metadata: grpc.Metadata,
@@ -761,6 +986,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ServerMetadataResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc ServerReady(ServerReadyRequest) returns
+   * @@       (ServerReadyResponse)
+   * @@
+   * @@     Check readiness of the inference server.
+   * @@
+   */
   ServerReady(
     argument: _inference_ServerReadyRequest,
     metadata: grpc.Metadata,
@@ -781,6 +1013,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_ServerReadyRequest,
     callback: grpc.requestCallback<_inference_ServerReadyResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc ServerReady(ServerReadyRequest) returns
+   * @@       (ServerReadyResponse)
+   * @@
+   * @@     Check readiness of the inference server.
+   * @@
+   */
   serverReady(
     argument: _inference_ServerReadyRequest,
     metadata: grpc.Metadata,
@@ -802,6 +1041,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_ServerReadyResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryRegister(
+   * @@                     SystemSharedMemoryRegisterRequest)
+   * @@                   returns (SystemSharedMemoryRegisterResponse)
+   * @@
+   * @@     Register a system-shared-memory region.
+   * @@
+   */
   SystemSharedMemoryRegister(
     argument: _inference_SystemSharedMemoryRegisterRequest,
     metadata: grpc.Metadata,
@@ -822,6 +1069,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_SystemSharedMemoryRegisterRequest,
     callback: grpc.requestCallback<_inference_SystemSharedMemoryRegisterResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryRegister(
+   * @@                     SystemSharedMemoryRegisterRequest)
+   * @@                   returns (SystemSharedMemoryRegisterResponse)
+   * @@
+   * @@     Register a system-shared-memory region.
+   * @@
+   */
   systemSharedMemoryRegister(
     argument: _inference_SystemSharedMemoryRegisterRequest,
     metadata: grpc.Metadata,
@@ -843,6 +1098,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_SystemSharedMemoryRegisterResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryStatus(
+   * @@                     SystemSharedMemoryStatusRequest)
+   * @@                   returns (SystemSharedMemoryStatusRespose)
+   * @@
+   * @@     Get the status of all registered system-shared-memory regions.
+   * @@
+   */
   SystemSharedMemoryStatus(
     argument: _inference_SystemSharedMemoryStatusRequest,
     metadata: grpc.Metadata,
@@ -863,6 +1126,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_SystemSharedMemoryStatusRequest,
     callback: grpc.requestCallback<_inference_SystemSharedMemoryStatusResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryStatus(
+   * @@                     SystemSharedMemoryStatusRequest)
+   * @@                   returns (SystemSharedMemoryStatusRespose)
+   * @@
+   * @@     Get the status of all registered system-shared-memory regions.
+   * @@
+   */
   systemSharedMemoryStatus(
     argument: _inference_SystemSharedMemoryStatusRequest,
     metadata: grpc.Metadata,
@@ -884,6 +1155,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_SystemSharedMemoryStatusResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryUnregister(
+   * @@                     SystemSharedMemoryUnregisterRequest)
+   * @@                   returns (SystemSharedMemoryUnregisterResponse)
+   * @@
+   * @@     Unregister a system-shared-memory region.
+   * @@
+   */
   SystemSharedMemoryUnregister(
     argument: _inference_SystemSharedMemoryUnregisterRequest,
     metadata: grpc.Metadata,
@@ -904,6 +1183,14 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_SystemSharedMemoryUnregisterRequest,
     callback: grpc.requestCallback<_inference_SystemSharedMemoryUnregisterResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryUnregister(
+   * @@                     SystemSharedMemoryUnregisterRequest)
+   * @@                   returns (SystemSharedMemoryUnregisterResponse)
+   * @@
+   * @@     Unregister a system-shared-memory region.
+   * @@
+   */
   systemSharedMemoryUnregister(
     argument: _inference_SystemSharedMemoryUnregisterRequest,
     metadata: grpc.Metadata,
@@ -925,6 +1212,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     callback: grpc.requestCallback<_inference_SystemSharedMemoryUnregisterResponse__Output>,
   ): grpc.ClientUnaryCall;
 
+  /**
+   * @@  .. cpp:var:: rpc TraceSetting(TraceSettingRequest)
+   * @@                   returns (TraceSettingResponse)
+   * @@
+   * @@     Update and get the trace setting of the Triton server.
+   * @@
+   */
   TraceSetting(
     argument: _inference_TraceSettingRequest,
     metadata: grpc.Metadata,
@@ -945,6 +1239,13 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
     argument: _inference_TraceSettingRequest,
     callback: grpc.requestCallback<_inference_TraceSettingResponse__Output>,
   ): grpc.ClientUnaryCall;
+  /**
+   * @@  .. cpp:var:: rpc TraceSetting(TraceSettingRequest)
+   * @@                   returns (TraceSettingResponse)
+   * @@
+   * @@     Update and get the trace setting of the Triton server.
+   * @@
+   */
   traceSetting(
     argument: _inference_TraceSettingRequest,
     metadata: grpc.Metadata,
@@ -967,102 +1268,256 @@ export interface GRPCInferenceServiceClient extends grpc.Client {
   ): grpc.ClientUnaryCall;
 }
 
+/**
+ * @@
+ * @@.. cpp:var:: service InferenceService
+ * @@
+ * @@   Inference Server GRPC endpoints.
+ * @@
+ */
 export interface GRPCInferenceServiceHandlers extends grpc.UntypedServiceImplementation {
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryRegister(
+   * @@                     CudaSharedMemoryRegisterRequest)
+   * @@                   returns (CudaSharedMemoryRegisterResponse)
+   * @@
+   * @@     Register a CUDA-shared-memory region.
+   * @@
+   */
   CudaSharedMemoryRegister: grpc.handleUnaryCall<
     _inference_CudaSharedMemoryRegisterRequest__Output,
     _inference_CudaSharedMemoryRegisterResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryStatus(
+   * @@                     CudaSharedMemoryStatusRequest)
+   * @@                   returns (CudaSharedMemoryStatusRespose)
+   * @@
+   * @@     Get the status of all registered CUDA-shared-memory regions.
+   * @@
+   */
   CudaSharedMemoryStatus: grpc.handleUnaryCall<
     _inference_CudaSharedMemoryStatusRequest__Output,
     _inference_CudaSharedMemoryStatusResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc CudaSharedMemoryUnregister(
+   * @@                     CudaSharedMemoryUnregisterRequest)
+   * @@                   returns (CudaSharedMemoryUnregisterResponse)
+   * @@
+   * @@     Unregister a CUDA-shared-memory region.
+   * @@
+   */
   CudaSharedMemoryUnregister: grpc.handleUnaryCall<
     _inference_CudaSharedMemoryUnregisterRequest__Output,
     _inference_CudaSharedMemoryUnregisterResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc LogSettings(LogSettingsRequest)
+   * @@                   returns (LogSettingsResponse)
+   * @@
+   * @@     Update and get the log settings of the Triton server.
+   * @@
+   */
   LogSettings: grpc.handleUnaryCall<
     _inference_LogSettingsRequest__Output,
     _inference_LogSettingsResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelConfig(ModelConfigRequest) returns
+   * @@       (ModelConfigResponse)
+   * @@
+   * @@     Get model configuration.
+   * @@
+   */
   ModelConfig: grpc.handleUnaryCall<
     _inference_ModelConfigRequest__Output,
     _inference_ModelConfigResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelInfer(ModelInferRequest) returns
+   * @@       (ModelInferResponse)
+   * @@
+   * @@     Perform inference using a specific model.
+   * @@
+   */
   ModelInfer: grpc.handleUnaryCall<
     _inference_ModelInferRequest__Output,
     _inference_ModelInferResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelMetadata(ModelMetadataRequest) returns
+   * @@       (ModelMetadataResponse)
+   * @@
+   * @@     Get model metadata.
+   * @@
+   */
   ModelMetadata: grpc.handleUnaryCall<
     _inference_ModelMetadataRequest__Output,
     _inference_ModelMetadataResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelReady(ModelReadyRequest) returns
+   * @@       (ModelReadyResponse)
+   * @@
+   * @@     Check readiness of a model in the inference server.
+   * @@
+   */
   ModelReady: grpc.handleUnaryCall<
     _inference_ModelReadyRequest__Output,
     _inference_ModelReadyResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelStatistics(
+   * @@                     ModelStatisticsRequest)
+   * @@                   returns (ModelStatisticsResponse)
+   * @@
+   * @@     Get the cumulative inference statistics for a model.
+   * @@
+   */
   ModelStatistics: grpc.handleUnaryCall<
     _inference_ModelStatisticsRequest__Output,
     _inference_ModelStatisticsResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ModelStreamInfer(stream ModelInferRequest) returns
+   * @@       (stream ModelStreamInferResponse)
+   * @@
+   * @@     Perform streaming inference.
+   * @@
+   */
   ModelStreamInfer: grpc.handleBidiStreamingCall<
     _inference_ModelInferRequest__Output,
     _inference_ModelStreamInferResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc RepositoryIndex(RepositoryIndexRequest) returns
+   * @@       (RepositoryIndexResponse)
+   * @@
+   * @@     Get the index of model repository contents.
+   * @@
+   */
   RepositoryIndex: grpc.handleUnaryCall<
     _inference_RepositoryIndexRequest__Output,
     _inference_RepositoryIndexResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc RepositoryModelLoad(RepositoryModelLoadRequest) returns
+   * @@       (RepositoryModelLoadResponse)
+   * @@
+   * @@     Load or reload a model from a repository.
+   * @@
+   */
   RepositoryModelLoad: grpc.handleUnaryCall<
     _inference_RepositoryModelLoadRequest__Output,
     _inference_RepositoryModelLoadResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc RepositoryModelUnload(RepositoryModelUnloadRequest)
+   * @@       returns (RepositoryModelUnloadResponse)
+   * @@
+   * @@     Unload a model.
+   * @@
+   */
   RepositoryModelUnload: grpc.handleUnaryCall<
     _inference_RepositoryModelUnloadRequest__Output,
     _inference_RepositoryModelUnloadResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ServerLive(ServerLiveRequest) returns
+   * @@       (ServerLiveResponse)
+   * @@
+   * @@     Check liveness of the inference server.
+   * @@
+   */
   ServerLive: grpc.handleUnaryCall<
     _inference_ServerLiveRequest__Output,
     _inference_ServerLiveResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ServerMetadata(ServerMetadataRequest) returns
+   * @@       (ServerMetadataResponse)
+   * @@
+   * @@     Get server metadata.
+   * @@
+   */
   ServerMetadata: grpc.handleUnaryCall<
     _inference_ServerMetadataRequest__Output,
     _inference_ServerMetadataResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc ServerReady(ServerReadyRequest) returns
+   * @@       (ServerReadyResponse)
+   * @@
+   * @@     Check readiness of the inference server.
+   * @@
+   */
   ServerReady: grpc.handleUnaryCall<
     _inference_ServerReadyRequest__Output,
     _inference_ServerReadyResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryRegister(
+   * @@                     SystemSharedMemoryRegisterRequest)
+   * @@                   returns (SystemSharedMemoryRegisterResponse)
+   * @@
+   * @@     Register a system-shared-memory region.
+   * @@
+   */
   SystemSharedMemoryRegister: grpc.handleUnaryCall<
     _inference_SystemSharedMemoryRegisterRequest__Output,
     _inference_SystemSharedMemoryRegisterResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryStatus(
+   * @@                     SystemSharedMemoryStatusRequest)
+   * @@                   returns (SystemSharedMemoryStatusRespose)
+   * @@
+   * @@     Get the status of all registered system-shared-memory regions.
+   * @@
+   */
   SystemSharedMemoryStatus: grpc.handleUnaryCall<
     _inference_SystemSharedMemoryStatusRequest__Output,
     _inference_SystemSharedMemoryStatusResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc SystemSharedMemoryUnregister(
+   * @@                     SystemSharedMemoryUnregisterRequest)
+   * @@                   returns (SystemSharedMemoryUnregisterResponse)
+   * @@
+   * @@     Unregister a system-shared-memory region.
+   * @@
+   */
   SystemSharedMemoryUnregister: grpc.handleUnaryCall<
     _inference_SystemSharedMemoryUnregisterRequest__Output,
     _inference_SystemSharedMemoryUnregisterResponse
   >;
 
+  /**
+   * @@  .. cpp:var:: rpc TraceSetting(TraceSettingRequest)
+   * @@                   returns (TraceSettingResponse)
+   * @@
+   * @@     Update and get the trace setting of the Triton server.
+   * @@
+   */
   TraceSetting: grpc.handleUnaryCall<
     _inference_TraceSettingRequest__Output,
     _inference_TraceSettingResponse
