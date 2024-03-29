@@ -40,6 +40,26 @@ npm install @mgcrea/triton-client --save
 pnpm add @mgcrea/triton-client
 ```
 
+### Example
+
+```ts
+import { createClient } from "@mgcrea/triton-client";
+import { formatWithOptions } from "node:util";
+
+const client = createClient("localhost:8001");
+
+const log = (...args: unknown[]) =>
+  console.log(formatWithOptions({ depth: 10, colors: true }, ...args));
+
+export const main = async () => {
+  const live = await client.serverLive({});
+  const ready = await client.serverReady({});
+  const repositoryIndex = await client.repositoryIndex({});
+
+  log({ live, ready, repositoryIndex });
+};
+```
+
 ## Authors
 
 - [Olivier Louvignes](https://github.com/mgcrea) <<olivier@mgcrea.io>>
