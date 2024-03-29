@@ -1,2 +1,1 @@
-export * from "./foo";
-export * from "./random";
+export * from "./debug";

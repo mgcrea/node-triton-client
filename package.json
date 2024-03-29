@@ -1,6 +1,6 @@
 {
   "name": "triton-client",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "private": true,
   "author": "",
@@ -16,7 +16,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "triton": "./dist/bin/cli.cjs"
+    "triton-client": "./dist/bin/cli.cjs"
   },
   "files": [
     "proto",
@@ -25,15 +25,16 @@
   "scripts": {
     "start": "tsx src/index.ts",
     "dev": "tsx watch --inspect src/index.ts",
-    "cli": "tsx watch --inspect src/bin/cli.ts random 5 25",
-    "build": "tsup --entry src/index.ts --format cjs,esm --sourcemap --dts --clean --entry src/bin/cli.ts",
+    "cli": "tsx watch --inspect src/bin/cli.ts",
+    "build": "tsup --shims --entry src/index.ts --format cjs,esm --sourcemap --dts --clean --entry src/bin/cli.ts",
     "build:proto": "proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --includeComments --grpcLib=@grpc/grpc-js --outDir=src/types proto/*.proto && prettier --write src/types",
     "preview": "node --experimental-specifier-resolution=node --no-warnings dist/index.js",
     "prettify": "prettier --write src/ test/",
     "lint": "eslint src/ test/",
     "prettycheck": "prettier --check src/ test/",
     "typecheck": "tsc --noEmit",
-    "spec": "vitest --run",
+    "spec": "vitest --run --reporter=verbose",
+    "watch": "vitest --watch --reporter=verbose",
     "test": "npm run lint && npm run prettycheck && npm run typecheck && npm run spec",
     "prepublishOnly": "npm run build"
   },
