@@ -1,5 +1,7 @@
 export * from "./client";
 
+export { bufferToFloat32Array } from "./utils/buffer";
+
 import type { ProtoGrpcType } from "./types/grpc_service";
 
 export type ServerLiveRequest = ProtoGrpcType["inference"]["ServerLiveRequest"];
