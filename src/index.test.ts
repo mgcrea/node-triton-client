@@ -6,6 +6,7 @@ describe("module", () => {
     expect(Object.keys(module)).toMatchInlineSnapshot(`
       [
         "createClient",
+        "bufferToFloat32Array",
       ]
     `);
   });

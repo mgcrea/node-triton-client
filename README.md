@@ -15,11 +15,11 @@
     <img src="https://img.shields.io/npm/l/@mgcrea/triton-client.svg?style=for-the-badge" alt="npm license" />
   </a>
   <br />
-  <a href="https://github.com/mgcrea/triton-client/actions/workflows/main.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/mgcrea/triton-client/main.yml?style=for-the-badge&branch=master" alt="build status" />
+  <a href="https://github.com/mgcrea/node-triton-client/actions/workflows/main.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/mgcrea/node-triton-client/main.yml?style=for-the-badge&branch=master" alt="build status" />
   </a>
-  <a href="https://depfu.com/github/mgcrea/triton-client">
-    <img src="https://img.shields.io/depfu/dependencies/github/mgcrea/triton-client?style=for-the-badge" alt="dependencies status" />
+  <a href="https://depfu.com/github/mgcrea/node-triton-client">
+    <img src="https://img.shields.io/depfu/dependencies/github/mgcrea/node-triton-client?style=for-the-badge" alt="dependencies status" />
   </a>
 </p>
 <!-- markdownlint-enable MD037 -->
