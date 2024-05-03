@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bufferToFloat32Array } from "./buffer"; // Adjust the import path as needed
+import { bufferToFloat32Array, bytesBufferToStringArray } from "./buffer"; // Adjust the import path as needed
 
 describe("bufferToFloat32Array", () => {
   it("should return a Float32Array without realignment if byteOffset is a multiple of 4", () => {
@@ -35,5 +35,25 @@ describe("bufferToFloat32Array", () => {
     const float32Array = bufferToFloat32Array(buffer);
     expect(float32Array).toBeInstanceOf(Float32Array);
     expect(float32Array.length).toBe(0);
+  });
+});
+
+describe("bytesBufferToStringArray", () => {
+  it("should correctly decode byte-encoded strings from a buffer", () => {
+    const buffer = Buffer.from([
+      0x06, 0x00, 0x00, 0x00, 0x31, 0x36, 0x34, 0x33, 0x37, 0x39, 0x02, 0x00, 0x00, 0x00, 0x32,
+      0x34, 0x06, 0x00, 0x00, 0x00, 0x33, 0x30, 0x35, 0x38, 0x36, 0x32, 0x01, 0x00, 0x00, 0x00,
+      0x34,
+    ]);
+    const expectedOutput = ["164379", "24", "305862", "4"];
+    const result = bytesBufferToStringArray(buffer);
+    expect(result).toEqual(expectedOutput);
+  });
+
+  it("should handle empty buffer", () => {
+    const buffer = Buffer.from([]);
+    const expectedOutput: string[] = [];
+    const result = bytesBufferToStringArray(buffer);
+    expect(result).toEqual(expectedOutput);
   });
 });
