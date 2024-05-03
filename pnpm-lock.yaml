@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@grpc/proto-loader@0.7.13':
+    hash: mzvatned46b3qcs6qxlktb43qu
+    path: patches/@grpc__proto-loader@0.7.13.patch
+
 importers:
 
   .:
@@ -13,7 +18,7 @@ importers:
         version: 1.10.7
       '@grpc/proto-loader':
         specifier: ^0.7.13
-        version: 0.7.13
+        version: 0.7.13(patch_hash=mzvatned46b3qcs6qxlktb43qu)
     devDependencies:
       '@mgcrea/eslint-config-node':
         specifier: ^0.10.1
@@ -1895,10 +1900,10 @@ snapshots:
 
   '@grpc/grpc-js@1.10.7':
     dependencies:
-      '@grpc/proto-loader': 0.7.13
+      '@grpc/proto-loader': 0.7.13(patch_hash=mzvatned46b3qcs6qxlktb43qu)
       '@js-sdsl/ordered-map': 4.4.2
 
-  '@grpc/proto-loader@0.7.13':
+  '@grpc/proto-loader@0.7.13(patch_hash=mzvatned46b3qcs6qxlktb43qu)':
     dependencies:
       lodash.camelcase: 4.3.0
       long: 5.2.3
