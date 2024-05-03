@@ -55,10 +55,5 @@
     "typescript": "^5.4.5",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.5.3"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@grpc/proto-loader@0.7.12": "patches/@grpc__proto-loader@0.7.12.patch"
-    }
   }
 }
