@@ -7,6 +7,7 @@ describe("module", () => {
       [
         "createClient",
         "bufferToFloat32Array",
+        "bytesBufferToStringArray",
       ]
     `);
   });
