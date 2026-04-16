@@ -34,7 +34,7 @@ jobs:
       - name: Format 🔍
         run: pnpm run format:check
       - name: TypeScript 🔍
-        run: pnpm run typecheck
+        run: pnpm run check
       - name: Vitest 🔍
         run: pnpm run spec
   build:
