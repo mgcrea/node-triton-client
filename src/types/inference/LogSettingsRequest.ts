@@ -47,7 +47,7 @@ export interface _inference_LogSettingsRequest_SettingValue__Output {
    * @@
    */
   stringParam?: string;
-  parameterChoice: "boolParam" | "uint32Param" | "stringParam";
+  parameterChoice?: "boolParam" | "uint32Param" | "stringParam";
 }
 
 /**

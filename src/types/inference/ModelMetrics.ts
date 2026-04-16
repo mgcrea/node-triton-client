@@ -101,7 +101,7 @@ export interface _inference_ModelMetrics_MetricControl__Output {
    * @@     The value to override the metrics defined in metric_identifier.
    * @@
    */
-  metricOptions: "histogramOptions";
+  metricOptions?: "histogramOptions";
 }
 
 /**

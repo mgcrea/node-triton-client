@@ -552,5 +552,5 @@ export interface ModelConfig__Output {
    * @@     policy is to execute each inference request independently.
    * @@
    */
-  schedulingChoice: "dynamicBatching" | "sequenceBatching" | "ensembleScheduling";
+  schedulingChoice?: "dynamicBatching" | "sequenceBatching" | "ensembleScheduling";
 }

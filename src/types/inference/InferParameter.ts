@@ -117,5 +117,5 @@ export interface InferParameter__Output {
    * @@           are not supported for custom parameters
    * @@
    */
-  parameterChoice: "boolParam" | "int64Param" | "stringParam" | "doubleParam" | "uint64Param";
+  parameterChoice?: "boolParam" | "int64Param" | "stringParam" | "doubleParam" | "uint64Param";
 }

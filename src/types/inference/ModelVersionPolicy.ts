@@ -167,5 +167,5 @@ export interface ModelVersionPolicy__Output {
    * @@     default policy is 'Latest'.
    * @@
    */
-  policyChoice: "latest" | "all" | "specific";
+  policyChoice?: "latest" | "all" | "specific";
 }

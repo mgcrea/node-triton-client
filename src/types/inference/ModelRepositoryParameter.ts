@@ -91,5 +91,5 @@ export interface ModelRepositoryParameter__Output {
    * @@     a boolean
    * @@
    */
-  parameterChoice: "boolParam" | "int64Param" | "stringParam" | "bytesParam";
+  parameterChoice?: "boolParam" | "int64Param" | "stringParam" | "bytesParam";
 }

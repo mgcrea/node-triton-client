@@ -282,7 +282,7 @@ export interface _inference_ModelSequenceBatching_InitialState__Output {
    * @@         Specify how the initial state data is generated.
    * @@
    */
-  stateData: "zeroData" | "dataFile";
+  stateData?: "zeroData" | "dataFile";
 }
 
 // Original file: proto/model_config.proto
@@ -941,5 +941,5 @@ export interface ModelSequenceBatching__Output {
    * @@     is 'direct'.
    * @@
    */
-  strategyChoice: "direct" | "oldest";
+  strategyChoice?: "direct" | "oldest";
 }

@@ -134,7 +134,7 @@ export interface _inference_ModelWarmup_Input__Output {
    * @@       back to 'zero_data'.
    * @@
    */
-  inputDataType: "zeroData" | "randomData" | "inputDataFile";
+  inputDataType?: "zeroData" | "randomData" | "inputDataFile";
 }
 
 /**
