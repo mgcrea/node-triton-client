@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { createClient } from "src";
+import { createClient } from "src/client";
 import { log } from "src/utils";
 
 const name = "triton-client";
