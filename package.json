@@ -37,7 +37,7 @@
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
     "lint": "oxlint src/ test/",
-    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit",
     "spec": "vitest --run --reporter=verbose",
     "watch": "vitest --watch --reporter=verbose",
     "test": "npm run lint && npm run format:check && npm run typecheck && npm run spec",
