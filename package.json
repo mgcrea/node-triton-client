@@ -1,6 +1,6 @@
 {
   "name": "@mgcrea/triton-client",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "TypeScript-ready client for Nvidia Triton inference server",
   "license": "MIT",
   "author": "Olivier Louvignes <olivier@mgcrea.io>",
