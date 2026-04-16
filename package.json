@@ -44,8 +44,8 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.10.7",
-    "@grpc/proto-loader": "^0.7.13"
+    "@grpc/grpc-js": "^1.14.3",
+    "@grpc/proto-loader": "^0.8.0"
   },
   "devDependencies": {
     "@tsconfig/node-lts": "^20.1.3",
@@ -62,7 +62,7 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@grpc/proto-loader@0.7.13": "patches/@grpc__proto-loader@0.7.13.patch"
+      "@grpc/proto-loader@0.8.0": "patches/@grpc__proto-loader@0.8.0.patch"
     }
   }
 }
