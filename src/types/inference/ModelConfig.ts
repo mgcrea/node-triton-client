@@ -25,6 +25,10 @@ import type {
   ModelInstanceGroup__Output as _inference_ModelInstanceGroup__Output,
 } from "../inference/ModelInstanceGroup";
 import type {
+  ModelMetrics as _inference_ModelMetrics,
+  ModelMetrics__Output as _inference_ModelMetrics__Output,
+} from "../inference/ModelMetrics";
+import type {
   ModelOperations as _inference_ModelOperations,
   ModelOperations__Output as _inference_ModelOperations__Output,
 } from "../inference/ModelOperations";
@@ -290,6 +294,14 @@ export interface ModelConfig {
    */
   runtime?: string;
   /**
+   * @@  .. cpp:var:: ModelMetrics model_metrics
+   * @@
+   * @@     Optional setting for custom metrics configuration for this model.
+   * @@     Application default is applied to metrics that are not specified.
+   * @@
+   */
+  modelMetrics?: _inference_ModelMetrics | null;
+  /**
    * @@  .. cpp:var:: oneof scheduling_choice
    * @@
    * @@     The scheduling policy for the model. If not specified the
@@ -524,6 +536,14 @@ export interface ModelConfig__Output {
    * @@
    */
   runtime: string;
+  /**
+   * @@  .. cpp:var:: ModelMetrics model_metrics
+   * @@
+   * @@     Optional setting for custom metrics configuration for this model.
+   * @@     Application default is applied to metrics that are not specified.
+   * @@
+   */
+  modelMetrics: _inference_ModelMetrics__Output | null;
   /**
    * @@  .. cpp:var:: oneof scheduling_choice
    * @@

@@ -180,6 +180,16 @@ export interface ModelInput {
    * @@
    */
   optional?: boolean;
+  /**
+   * @@  .. cpp:var:: bool is_non_linear_format_io
+   * @@
+   * @@     Indicates whether the input tensor uses a non-linear IO format. This
+   * @@     field is currently supported only for TensorRT models. An error will
+   * @@     be generated if this specification does not comply with the
+   * @@     underlying model.
+   * @@
+   */
+  isNonLinearFormatIo?: boolean;
 }
 
 /**
@@ -259,4 +269,14 @@ export interface ModelInput__Output {
    * @@
    */
   optional: boolean;
+  /**
+   * @@  .. cpp:var:: bool is_non_linear_format_io
+   * @@
+   * @@     Indicates whether the input tensor uses a non-linear IO format. This
+   * @@     field is currently supported only for TensorRT models. An error will
+   * @@     be generated if this specification does not comply with the
+   * @@     underlying model.
+   * @@
+   */
+  isNonLinearFormatIo: boolean;
 }

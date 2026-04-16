@@ -130,6 +130,24 @@ export interface ModelEnsembling {
    * @@
    */
   step?: _inference_ModelEnsembling_Step[];
+  /**
+   * @@  .. cpp:var:: uint32 max_inflight_requests
+   * @@
+   * @@     BETA  (Subject to change)
+   * @@     The maximum number of concurrent in-flight requests allowed at each
+   * @@     ensemble step across all ongoing ensemble requests for this model
+   * @@     instance. This per-step limit prevents unbounded memory growth when
+   * @@     ensemble steps produce responses faster than downstream steps can
+   * @@     consume them (for example, in decoupled models).
+   * @@     The default value is 0, which indicates that no limit is enforced.
+   * @@
+   * @@     Note: Applying this limit may block upstream steps while they wait
+   * @@     for downstream capacity. This blocking does not cancel or internally
+   * @@     time out intermediate requests, but clients may experience increased
+   * @@     end-to-end latency.
+   * @@
+   */
+  maxInflightRequests?: number;
 }
 
 /**
@@ -148,4 +166,22 @@ export interface ModelEnsembling__Output {
    * @@
    */
   step: _inference_ModelEnsembling_Step__Output[];
+  /**
+   * @@  .. cpp:var:: uint32 max_inflight_requests
+   * @@
+   * @@     BETA  (Subject to change)
+   * @@     The maximum number of concurrent in-flight requests allowed at each
+   * @@     ensemble step across all ongoing ensemble requests for this model
+   * @@     instance. This per-step limit prevents unbounded memory growth when
+   * @@     ensemble steps produce responses faster than downstream steps can
+   * @@     consume them (for example, in decoupled models).
+   * @@     The default value is 0, which indicates that no limit is enforced.
+   * @@
+   * @@     Note: Applying this limit may block upstream steps while they wait
+   * @@     for downstream capacity. This blocking does not cancel or internally
+   * @@     time out intermediate requests, but clients may experience increased
+   * @@     end-to-end latency.
+   * @@
+   */
+  maxInflightRequests: number;
 }

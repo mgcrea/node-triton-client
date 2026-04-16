@@ -1,14 +1,14 @@
 # Protobuf files
 
-The files in this folder come from [triton-inference-server/common](https://github.com/triton-inference-server/common/tree/main/protobuf) and are owned by [Nvidia Corporation](https://www.nvidia.com) with the following [LICENCE](./LICENCE).
+The files in this folder come from [triton-inference-server/common](https://github.com/triton-inference-server/common/tree/r26.04/protobuf) and are owned by [Nvidia Corporation](https://www.nvidia.com) with the following [LICENCE](./LICENCE).
 
-Current snapshot is from commit [00b3a71](https://github.com/triton-inference-server/common/commit/00b3a71519e32e3bc954e9f0d067e155ef8f1a6c) dated of 23/02/2024.
+Current snapshot is from commit [b0b5387](https://github.com/triton-inference-server/common/commit/b0b538731dfbd910af5b90027f811677526072d8) on the `r26.04` branch.
 
 # Overview of Protobuf Files in This Directory
 
 This directory hosts Protocol Buffer (Protobuf) files that have been sourced from the `triton-inference-server/common` repository on GitHub, specifically found at [this link](https://github.com/triton-inference-server/common/tree/main/protobuf). These files are proprietary assets of the Nvidia Corporation, accessible via [their official website](https://www.nvidia.com). The usage of these files is governed under the terms specified in the [LICENSE](./LICENSE) file contained within this directory.
 
-The files currently reflect the state of the repository as of the commit `[00b3a71](https://github.com/triton-inference-server/common/commit/00b3a71519e32e3bc954e9f0d067e155ef8f1a6c)`, dated February 23, 2024.
+The files currently reflect the state of the repository as of commit [`b0b5387`](https://github.com/triton-inference-server/common/commit/b0b538731dfbd910af5b90027f811677526072d8) on the `r26.04` branch.
 
 ## Introduction to Protobuf Files
 

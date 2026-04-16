@@ -51,6 +51,7 @@ export interface ProtoGrpcType {
     ModelInstanceGroup: MessageTypeDefinition;
     ModelMetadataRequest: MessageTypeDefinition;
     ModelMetadataResponse: MessageTypeDefinition;
+    ModelMetrics: MessageTypeDefinition;
     ModelOperations: MessageTypeDefinition;
     ModelOptimizationPolicy: MessageTypeDefinition;
     ModelOutput: MessageTypeDefinition;
