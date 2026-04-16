@@ -9,6 +9,7 @@ lerna-debug.log*
 
 # Artefacts
 node_modules
+coverage
 dist
 dist-ssr
 *.local

@@ -39,6 +39,7 @@
     "lint": "oxlint src/ test/",
     "check": "tsc --noEmit",
     "spec": "vitest --run --reporter=verbose",
+    "coverage": "vitest --run --coverage",
     "watch": "vitest --watch --reporter=verbose",
     "test": "npm run lint && npm run format:check && npm run typecheck && npm run spec",
     "prepublishOnly": "npm run build"
@@ -51,6 +52,7 @@
     "@tsconfig/node-lts": "^24.0.0",
     "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^24.12.2",
+    "@vitest/coverage-v8": "^4.1.4",
     "oxfmt": "^0.45.0",
     "oxlint": "^1.60.0",
     "tsdown": "^0.21.9",
