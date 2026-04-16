@@ -1,6 +1,7 @@
 // Original file: proto/grpc_service.proto
 
 import type { Long } from "@grpc/proto-loader";
+
 import type {
   StatisticDuration as _inference_StatisticDuration,
   StatisticDuration__Output as _inference_StatisticDuration__Output,

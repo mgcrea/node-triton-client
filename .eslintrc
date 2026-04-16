@@ -1,7 +1,0 @@
-{
-  "extends": ["@mgcrea/node"],
-  "root": true,
-  "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
-  },
-}

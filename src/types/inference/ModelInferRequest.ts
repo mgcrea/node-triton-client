@@ -1,6 +1,7 @@
 // Original file: proto/grpc_service.proto
 
 import type { Long } from "@grpc/proto-loader";
+
 import type {
   InferParameter as _inference_InferParameter,
   InferParameter__Output as _inference_InferParameter__Output,

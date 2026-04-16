@@ -1,6 +1,7 @@
 // Original file: proto/model_config.proto
 
 import type { Long } from "@grpc/proto-loader";
+
 import type {
   ModelQueuePolicy as _inference_ModelQueuePolicy,
   ModelQueuePolicy__Output as _inference_ModelQueuePolicy__Output,

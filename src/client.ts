@@ -1,8 +1,9 @@
-import grpc from "@grpc/grpc-js";
-import protoLoader from "@grpc/proto-loader";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
+
+import grpc from "@grpc/grpc-js";
+import protoLoader from "@grpc/proto-loader";
 import type { ProtoGrpcType } from "src/types/grpc_service";
 import "src/utils/debug";
 

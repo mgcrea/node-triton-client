@@ -1,7 +1,7 @@
 import { formatWithOptions } from "node:util";
 
 declare global {
-  // eslint-disable-next-line no-var
+  // oxlint-ignore no-var
   var d: (...args: unknown[]) => void;
 }
 

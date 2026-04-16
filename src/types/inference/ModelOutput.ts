@@ -1,6 +1,7 @@
 // Original file: proto/model_config.proto
 
 import type { Long } from "@grpc/proto-loader";
+
 import type {
   DataType as _inference_DataType,
   DataType__Output as _inference_DataType__Output,

@@ -1,6 +1,7 @@
 // Original file: proto/model_config.proto
 
 import type { Long } from "@grpc/proto-loader";
+
 import type {
   ModelRateLimiter as _inference_ModelRateLimiter,
   ModelRateLimiter__Output as _inference_ModelRateLimiter__Output,

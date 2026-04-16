@@ -1,6 +1,7 @@
 // Original file: proto/grpc_service.proto
 
 import type { Long } from "@grpc/proto-loader";
+
 import type {
   InferBatchStatistics as _inference_InferBatchStatistics,
   InferBatchStatistics__Output as _inference_InferBatchStatistics__Output,

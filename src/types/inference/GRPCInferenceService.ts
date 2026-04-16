@@ -2,6 +2,7 @@
 
 import type * as grpc from "@grpc/grpc-js";
 import type { MethodDefinition } from "@grpc/proto-loader";
+
 import type {
   CudaSharedMemoryRegisterRequest as _inference_CudaSharedMemoryRegisterRequest,
   CudaSharedMemoryRegisterRequest__Output as _inference_CudaSharedMemoryRegisterRequest__Output,
