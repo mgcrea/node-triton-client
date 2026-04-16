@@ -6,6 +6,9 @@
  * @returns Float32Array containing the decoded floating point values.
  */
 export const bufferToFloat32Array = (buf: Buffer): Float32Array => {
+  if (buf.byteLength % 4 !== 0) {
+    throw new RangeError(`Buffer byteLength (${buf.byteLength}) is not a multiple of 4`);
+  }
   // Check if the byteOffset is already a multiple of 4
   if (buf.byteOffset % 4 === 0) {
     // If aligned, create a Float32Array directly from the buffer
@@ -34,8 +37,16 @@ export const bytesBufferToStringArray = (buffer: Buffer): string[] => {
   let i = 0;
   // Loop through the buffer until the end
   while (i < buffer.length) {
+    if (i + 4 > buffer.length) {
+      throw new RangeError(`Truncated length prefix at offset ${i}`);
+    }
     // Read the length of the current string (4 bytes, little-endian)
     const length = buffer.readUInt32LE(i);
+    if (i + 4 + length > buffer.length) {
+      throw new RangeError(
+        `Truncated string data at offset ${i}: expected ${length} bytes, have ${buffer.length - i - 4}`,
+      );
+    }
     // Extract the string from the buffer and convert it to a string
     const value = buffer.subarray(i + 4, i + 4 + length).toString();
     // Push the decoded string to the array

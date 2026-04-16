@@ -37,6 +37,11 @@ describe("bufferToFloat32Array", () => {
     expect(float32Array).toBeInstanceOf(Float32Array);
     expect(float32Array.length).toBe(0);
   });
+
+  it("throws RangeError when byteLength is not a multiple of 4", () => {
+    const buffer = Buffer.alloc(5);
+    expect(() => bufferToFloat32Array(buffer)).toThrow(RangeError);
+  });
 });
 
 describe("bytesBufferToStringArray", () => {
@@ -56,5 +61,15 @@ describe("bytesBufferToStringArray", () => {
     const expectedOutput: string[] = [];
     const result = bytesBufferToStringArray(buffer);
     expect(result).toEqual(expectedOutput);
+  });
+
+  it("throws RangeError on truncated length prefix", () => {
+    const buffer = Buffer.from([0x06, 0x00]);
+    expect(() => bytesBufferToStringArray(buffer)).toThrow(RangeError);
+  });
+
+  it("throws RangeError on truncated string data", () => {
+    const buffer = Buffer.from([0x06, 0x00, 0x00, 0x00, 0x31, 0x36]);
+    expect(() => bytesBufferToStringArray(buffer)).toThrow(RangeError);
   });
 });
