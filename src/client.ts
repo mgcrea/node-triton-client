@@ -5,7 +5,6 @@ import { promisify } from "node:util";
 import grpc from "@grpc/grpc-js";
 import protoLoader from "@grpc/proto-loader";
 import type { ProtoGrpcType } from "src/types/grpc_service";
-import "src/utils/debug";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROTO_DIR = resolve(__dirname, "..", "proto");
@@ -57,20 +56,3 @@ export const createClient = (
 };
 
 export type GrpcClient = ReturnType<typeof createClient>;
-
-// // eslint-disable-next-line @typescript-eslint/ban-types
-// type Simplify<T> = { [KeyType in keyof T]: T[KeyType] } & {};
-// export type ServerLiveRequest = Simplify<Parameters<GrpcClient["serverLive"]>[0]>;
-// export type ServerLiveResponse = Simplify<Awaited<ReturnType<GrpcClient["serverLive"]>>>;
-// export type ServerReadyRequest = Simplify<Parameters<GrpcClient["serverReady"]>[0]>;
-// export type ServerReadyResponse = Simplify<Awaited<ReturnType<GrpcClient["serverReady"]>>>;
-// export type ModelConfigRequest = Simplify<Parameters<GrpcClient["modelConfig"]>[0]>;
-// export type ModelConfigResponse = Simplify<Awaited<ReturnType<GrpcClient["modelConfig"]>>>;
-// export type ModelInferRequest = Simplify<Parameters<GrpcClient["modelInfer"]>[0]>;
-// export type ModelInferResponse = Simplify<Awaited<ReturnType<GrpcClient["modelInfer"]>>>;
-// export type ModelMetadataRequest = Simplify<Parameters<GrpcClient["modelMetadata"]>[0]>;
-// export type ModelMetadataResponse = Simplify<Awaited<ReturnType<GrpcClient["modelMetadata"]>>>;
-// export type ModelReadyRequest = Simplify<Parameters<GrpcClient["modelReady"]>[0]>;
-// export type ModelReadyResponse = Simplify<Awaited<ReturnType<GrpcClient["modelReady"]>>>;
-// export type RepositoryIndexRequest = Simplify<Parameters<GrpcClient["repositoryIndex"]>[0]>;
-// export type RepositoryIndexResponse = Simplify<Awaited<ReturnType<GrpcClient["repositoryIndex"]>>>;

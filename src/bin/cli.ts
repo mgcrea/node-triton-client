@@ -37,34 +37,40 @@ ${Object.entries(actions)
 
 const URL = process.env["URL"] || "localhost:8001";
 
-const client = createClient(URL);
-
 const main = async () => {
-  switch (action as keyof typeof actions) {
-    case "serverLive": {
-      const result = await client.serverLive({});
-      log(result);
-      break;
+  const client = createClient(URL);
+  try {
+    switch (action as keyof typeof actions) {
+      case "serverLive": {
+        const result = await client.serverLive({});
+        log(result);
+        break;
+      }
+      case "serverReady": {
+        const result = await client.serverReady({});
+        log(result);
+        break;
+      }
+      case "repositoryIndex": {
+        const result = await client.repositoryIndex({});
+        log(result);
+        break;
+      }
+      case "modelMetadata": {
+        const [name = "text_detection", version = "1"] = args;
+        const result = await client.modelMetadata({ name, version });
+        log(result);
+        break;
+      }
+      default:
+        log(help);
     }
-    case "serverReady": {
-      const result = await client.serverReady({});
-      log(result);
-      break;
-    }
-    case "repositoryIndex": {
-      const result = await client.repositoryIndex({});
-      log(result);
-      break;
-    }
-    case "modelMetadata": {
-      const [name = "text_detection", version = "1"] = args as [string, string];
-      const result = await client.modelMetadata({ name, version });
-      log(result);
-      break;
-    }
-    default:
-      log(help);
+  } finally {
+    client.close();
   }
 };
 
-main();
+main().catch((error) => {
+  console.error(error instanceof Error ? error.message : String(error));
+  process.exit(1);
+});
