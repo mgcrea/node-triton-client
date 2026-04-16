@@ -85,6 +85,10 @@ import type {
   ModelWarmup__Output as _inference_ModelWarmup__Output,
 } from "./inference/ModelWarmup";
 
+export type SubtypeConstructor<Constructor extends new (...args: any) => any, Subtype> = {
+  new (...args: ConstructorParameters<Constructor>): Subtype;
+};
+
 export interface ProtoGrpcType {
   inference: {
     BatchInput: MessageTypeDefinition<_inference_BatchInput, _inference_BatchInput__Output>;
